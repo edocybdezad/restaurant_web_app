@@ -1,0 +1,18 @@
+{% extends "manager_tools/layout.html" %}
+
+{% block title %}Manager Tools{% endblock %}
+
+{% block body %}
+<div class="d-flex-col my-10">
+
+    {% for label in object_list %}            
+        <p class="mt-5 bg-sunny text-dark" id="{{ label.name|cut:' ' }}">{{ label.name }}</p>
+        {% for item in label.label_items.all %}
+        <div class="label-items">
+            <a href="{% url 'manager_tools:item-update' item.id %}"><button>{{ item.name }}</button></a>
+        </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+<hr class="my-10">
+{% endblock %}

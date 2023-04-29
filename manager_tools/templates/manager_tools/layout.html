@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <!-- Global Style -->
+    <link rel="stylesheet" href="{% static 'restaurant/basis.css' %}">
+    <link rel="stylesheet" href="{% static 'restaurant/utils.css' %}"> 
+       <!-- Page Style -->
+    <link rel="stylesheet" href="{% static 'manager_tools/managert.css' %}">
+
+    <!-- Global JS -->
+    <!-- <script src="{% static 'restaurant/restaurant.js' %}"></script> -->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="layout-container">
+        <header class="text-center">
+            <img src="{% static 'restaurant/logo-white-1.png' %}" alt="" class="brand-name">
+        </header>
+        <main class="">
+            <div class="text-center">
+                {% if messages %}
+                <ul class="messages" id='msg'>
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}                      
+            </div>
+            {% block body %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+</body>
+</html>

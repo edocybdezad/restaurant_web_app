@@ -1,0 +1,66 @@
+/* Google Fonts Lato */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+/* Varibales */
+
+:root {
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --site-color-light: #5eb8ff;
+    --site-color-slight: #62efff;
+
+}
+
+/* Reset browser default */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: white;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;  
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+p {
+    padding: 5px 5px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+header {
+    margin-top: 10px;
+    position: relative;
+    height: fit-content;
+    padding: 5px 5px;
+}
+.brand-name {
+    width: 120px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 2px var(--site-color-light);
+    position: absolute;
+
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}

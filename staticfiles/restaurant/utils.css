@@ -1,0 +1,148 @@
+/* TEXT FORMAT */
+.text-center {
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-black {
+    color: black;
+}
+.text-red {
+    color: red;
+}
+.text-light {
+    color: whitesmoke;
+}
+.text-dark {
+    color: #313030;
+}
+
+/* MARGINS AND PADDINGS*/
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mx-15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.mx-10 {
+    margin-left: 10px;
+    margin-right: 10px;    
+}
+.mx-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.my-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.px-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.px-10{
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-5{
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+.p-5 {
+    padding: 5px 5px;
+}
+/* BACKGROUnD COLORS */
+.bg-blue-1 {
+    background-color: #0000FF;;
+}
+.bg-blue-2 {
+    background-color: rgba(60, 105, 131, 0.89);
+}
+.bg-dark {
+    background-color: #212121;
+}
+.bg-sunny{
+    background-color: #f0cf6ebd;
+}
+.bg-dusk {
+    background-color: rgb(78, 91, 104);
+}
+
+.bg-none {
+    background-color: transparent;
+}
+
+/* WIDTHS */
+.w-xs{
+    width: 150px;
+}
+.w-sm{
+    width: 300px;
+}
+.w-md{
+    width: 600px;
+}
+.w-fluid{
+    width: 100%;
+}
+.container-sm {
+    width: 320px;
+    height: 100%;    
+}
+/* BUTTONS */
+.btn-small {
+    padding: 5px 10px;
+    border-radius: 10px 10px;
+    border: 0;
+}
+/* FLEX */
+.card{
+    display: flex;
+    border: 1px solid gray;
+}
+.d-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-flex-row div {
+    flex: 1;
+}
+.d-flex-wrap {
+    flex-wrap: wrap;
+}
+.f-justify-center {
+    justify-content:center;
+}
+.f-justify-around {
+    justify-content:space-around;
+}
+.f-justify-between {
+    justify-content:space-between;
+}
+.f-align-center {
+    align-items: center;
+}
+.border-none {
+    border: 0;
+}
