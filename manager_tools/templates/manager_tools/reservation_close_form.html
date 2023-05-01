@@ -1,0 +1,15 @@
+{% extends "manager_tools/layout.html" %}
+
+{% block title %}Manager Tools{% endblock %}
+
+{% block body %}
+<h4 class="text-center">Close Reservations </h4>
+<p class="text-center">For Closing Reservation for Today in Web</p>
+<p class="text-center">mark 'closed' options. To set a limit when </p>
+<p class="text-center">rservations should be closed set limit to a number of pax </p>
+<form action="" method="post" class="text-center my-10 py-5" id="closeReservationForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn-small bg-sunny" type="submit">Save</button>
+  </form>  
+{% endblock %}

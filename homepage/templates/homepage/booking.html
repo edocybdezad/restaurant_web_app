@@ -1,0 +1,75 @@
+{% extends "homepage/layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="d-flex-col f-align-center">
+        <div class="form-container my-10 py-10 bg-sunny">
+            <div id="reservationMessages"></div>
+            <form action="" method="post" id="reservationForm">
+                {% csrf_token %}
+                <div class="d-flex-row d-flex-wrap">
+                    <div class="r-info my-5">
+                        <h3 class="bg-dark">Reservation Info</h3>
+                        <div class="text-center">
+                            <h4 class="my-5">This Week</h4>
+                            {% for d in this_week %}
+                                <input class="radio" type="radio" id="cw_{{ d.day }}" name="days" value="{{ d.date }}">
+                                <label for="cw_{{ d.day }}">{{ d.day }}</label>
+                            {% endfor %}
+                        </div>
+                        <div class="text-center" id="nextWeek">
+                            <h4 class="my-5">Next Week</h4>
+                            {% for d in next_week %}
+                            <input class="radio" type="radio" id="nw_{{ d.day }}" name="days" value="{{ d.date }}">
+                            <label for="nw_{{ d.day }}">{{ d.day }}</label>
+                            {% endfor %}
+                        </div>
+                        <div class="text-center">
+                            <h4 class="my-5">Hours</h4>
+                            {% for h in hours %}
+                            <input class="radio" type="radio" id="hour_{{ forloop.counter }}" name="hours" value="{{ h }}">
+                            <label for="hour_{{ forloop.counter }}">{{ h }}</label>                            
+
+                            {% endfor %}
+                        </div>
+                        <div class="my-5 text-center">
+                            <h4>Personas</h4>
+                            {% for p in pax %}
+                            <input class="radio" type="radio" id="p_{{ forloop.counter }}" name="pax" value="{{ p }}">
+                            <label for="p_{{ forloop.counter }}">{{ p }}</label>                                
+                            {% endfor %}
+                        </div>
+                        <div class="text-center">
+                            <textarea name="notes" id="reNotes" cols="30" rows="4" placeholder="Write any special requirement&#10or any aditional info&#10A"></textarea>
+                        </div>
+                    </div>
+                    <div class="p-info my-5">
+                        <div class="r-customer-filling-info">
+                            <h4 class="bg-dark text-center">Personal Info</h4>                           
+                        </div>
+                        <div class="customer-fields text-center">
+                            <div class="">
+                                <label for="name">Name</label>
+                                <input type="text" class="" name='name' id="usrName" required>
+                            </div>
+                            <div class="">
+                                <label for="email" class="">Email</label>
+                                <input type="email" name='email' class="" id="usrEmail" required>
+                            </div>
+                            <div class="">
+                                <label for="phone" class="">phone</label>
+                                <input type="tel" name='phone' class="" id="usrPhone" required>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-dark text-center">
+                    <button type="submit" class="btn-small bg-dusk">Send</button>
+                </div>
+            </form>
+        </div>        
+    </div>
+
+{% endblock %}

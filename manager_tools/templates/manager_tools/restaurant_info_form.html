@@ -1,0 +1,11 @@
+{% extends "manager_tools/layout.html" %}
+
+{% block title %}Manager Tools{% endblock %}
+
+{% block body %}
+<form action="" method="post" class="text-center my-10 py-5" id="restaurantInfoForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn-small bg-sunny" type="submit">Save</button>
+  </form>  
+{% endblock %}
